@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: suibrahi <suibrahi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nelhassa <nelhassa@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/04 02:26:13 by suibrahi          #+#    #+#             */
-/*   Updated: 2023/08/04 08:04:57 by suibrahi         ###   ########.fr       */
+/*   Created: 2023/09/16 00:48:46 by nelhassa          #+#    #+#             */
+/*   Updated: 2023/09/16 00:48:47 by nelhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

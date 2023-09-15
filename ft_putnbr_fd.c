@@ -6,7 +6,7 @@
 /*   By: nelhassa <nelhassa@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 20:35:48 by nelhassa          #+#    #+#             */
-/*   Updated: 2023/09/15 20:35:51 by nelhassa         ###   ########.fr       */
+/*   Updated: 2023/09/15 23:42:16 by nelhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
+	if (n == INT_MIN)
 	{
 		ft_putchar_fd('-', fd);
 		ft_putchar_fd('2', fd);
@@ -25,7 +25,7 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('-', fd);
 		n = -n;
 	}
-	if (n >= 10)
+	if (n > 9)
 	{
 		ft_putnbr_fd(n / 10, fd);
 	}

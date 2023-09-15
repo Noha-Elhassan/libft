@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: suibrahi <suibrahi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nelhassa <nelhassa@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/04 02:26:13 by suibrahi          #+#    #+#             */
-/*   Updated: 2023/08/06 07:50:56 by suibrahi         ###   ########.fr       */
+/*   Created: 2023/09/16 00:46:40 by nelhassa          #+#    #+#             */
+/*   Updated: 2023/09/16 00:46:41 by nelhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

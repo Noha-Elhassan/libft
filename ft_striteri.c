@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: suibrahi <suibrahi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nelhassa <nelhassa@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/31 02:37:21 by suibrahi          #+#    #+#             */
-/*   Updated: 2023/08/06 04:22:19 by suibrahi         ###   ########.fr       */
+/*   Created: 2023/09/16 00:45:34 by nelhassa          #+#    #+#             */
+/*   Updated: 2023/09/16 00:45:35 by nelhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

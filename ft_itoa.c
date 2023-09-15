@@ -6,7 +6,7 @@
 /*   By: nelhassa <nelhassa@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 19:22:39 by nelhassa          #+#    #+#             */
-/*   Updated: 2023/09/15 19:17:56 by nelhassa         ###   ########.fr       */
+/*   Updated: 2023/09/15 22:35:59 by nelhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ char	*ft_itoa(int n)
 }
 
 // int main ()
-// {
+// { 
 //     int long n;
 // 	char *s;
 //     n = -123;

@@ -6,7 +6,7 @@
 /*   By: nelhassa <nelhassa@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 00:46:31 by nelhassa          #+#    #+#             */
-/*   Updated: 2023/09/16 00:46:33 by nelhassa         ###   ########.fr       */
+/*   Updated: 2023/09/18 22:15:25 by nelhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,27 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	lendest;
-	size_t	len;
+	size_t	dst_len;
+	size_t	i;
 
-	if (dst == (void *)0 && dstsize == 0)
-		return (0);
-	lendest = ft_strlen(dst);
-	if (dstsize <= lendest)
-		return (dstsize + ft_strlen(src));
-	len = 0;
+	dst_len = 0;
+	i = 0;
 	if (dstsize == 0)
-		return (ft_strlen(src));
-	while (src[len] != '\0' && lendest + 1 < dstsize)
 	{
-		dst[lendest] = src[len];
-		lendest++;
-		len++;
+		while (src[i])
+			i++;
+		return (i);
 	}
-	dst[lendest] = '\0';
-	return (ft_strlen(dst) + ft_strlen(&src[len]));
+	while (dst[dst_len] != '\0' && dst_len < dstsize)
+		dst_len++;
+	while (src[i] != '\0' && dst_len + i + 1 < dstsize)
+	{
+		dst[dst_len + i] = src[i];
+		i++;
+	}
+	if (dst_len < dstsize)
+		dst[dst_len + i] = '\0';
+	while (src[i] != '\0')
+		i++;
+	return (dst_len + i);
 }
-// int main()
-// {
-// 	char sre[]="ali ";
-// 	char dst[]="ahmed";
-// 	printf("%s", ft_strlcat())
-// }

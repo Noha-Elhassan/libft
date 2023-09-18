@@ -6,26 +6,22 @@
 /*   By: nelhassa <nelhassa@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 00:45:08 by nelhassa          #+#    #+#             */
-/*   Updated: 2023/09/16 00:45:12 by nelhassa         ###   ########.fr       */
+/*   Updated: 2023/09/16 20:49:24 by nelhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	char	*strp;
-
-	strp = (char *)str;
-	while (*strp)
+	while (*s)
 	{
-		if (*strp == (char)c)
-		{
-			return (strp);
-		}
-		strp++;
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
 	}
-	if (c == 0)
-		return (strp);
-	return (NULL);
+	if (*s == (char)c)
+		return ((char *)s);
+	else
+		return (NULL);
 }

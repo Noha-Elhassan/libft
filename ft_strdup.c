@@ -6,7 +6,7 @@
 /*   By: nelhassa <nelhassa@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 00:45:24 by nelhassa          #+#    #+#             */
-/*   Updated: 2023/09/16 00:45:26 by nelhassa         ###   ########.fr       */
+/*   Updated: 2023/09/16 21:13:10 by nelhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char	*s2;
+	size_t	len;
+	char	*str_dup;
 
-	s2 = (char *)malloc(ft_strlen(s1) + 1);
-	if (!s2)
-		return (0);
-	ft_memcpy(s2, s1, ft_strlen(s1) + 1);
-	return (s2);
+	len = ft_strlen(s1);
+	str_dup = (char *)malloc(len + 1);
+	if (!str_dup)
+		return (NULL);
+	ft_memcpy(str_dup, s1, len + 1);
+	return (str_dup);
 }

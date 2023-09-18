@@ -6,7 +6,7 @@
 /*   By: nelhassa <nelhassa@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 00:47:56 by nelhassa          #+#    #+#             */
-/*   Updated: 2023/09/16 00:47:57 by nelhassa         ###   ########.fr       */
+/*   Updated: 2023/09/17 22:13:13 by nelhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,26 +17,26 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		start;
 	int		j;
 	int		end;
-	char	*trimmeds1;
+	char	*trimmed_s1;
 
 	if (!s1 || !set)
 		return (NULL);
 	start = 0;
 	while (s1[start] != '\0' && ft_strchr(set, s1[start]))
-		++start;
+		start++;
 	end = ft_strlen(s1);
 	if (start == end)
 		return (ft_strdup(""));
 	while (end >= 0 && ft_strchr(set, s1[end - 1]))
-		--end;
+		end--;
 	if (start > end)
 		return (ft_strdup(""));
-	trimmeds1 = (char *)malloc(sizeof(*s1) * (end - start + 1));
-	if (!trimmeds1)
+	trimmed_s1 = (char *)malloc(sizeof(*s1) * (end - start + 1));
+	if (!trimmed_s1)
 		return (NULL);
 	j = 0;
 	while (start < end)
-		trimmeds1[j++] = s1[start++];
-	trimmeds1[j] = '\0';
-	return (trimmeds1);
+		trimmed_s1[j++] = s1[start++];
+	trimmed_s1[j] = '\0';
+	return (trimmed_s1);
 }

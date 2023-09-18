@@ -6,7 +6,7 @@
 /*   By: nelhassa <nelhassa@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 23:45:51 by nelhassa          #+#    #+#             */
-/*   Updated: 2023/09/16 01:31:47 by nelhassa         ###   ########.fr       */
+/*   Updated: 2023/09/18 22:56:56 by nelhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	ft_word_count(const char *s, char c)
 {
-	int		word_count;
-	size_t	i;
+	size_t		word_count;
+	size_t		i;
 
 	word_count = 0;
 	i = 0;
@@ -48,12 +48,12 @@ static size_t	word_len(char const *s, char c)
 	return (i);
 }
 
-static void	ft_free(char **str)
+static char	**ft_free(char **str)
 {
 	size_t	i;
 
 	if (str == NULL)
-		return ;
+		return (NULL);
 	i = 0;
 	while (str[i])
 	{
@@ -61,6 +61,7 @@ static void	ft_free(char **str)
 		i++;
 	}
 	free(str);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -78,28 +79,15 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (*s && i < word_count)
 	{
-		while (*s == c)
+		while (*s && *s == c)
 			s++;
 		str[i] = ft_substr(s, 0, word_len(s, c));
 		if (!str[i])
-		{
-			ft_free(str);
-			return (NULL);
-		}
-		while (*s != c)
+			return (ft_free(str));
+		while (*s && *s != c)
 			s++;
 		i++;
 	}
 	str[word_count] = NULL;
 	return (str);
-}
-
-int main()
-{
-	char **s = ft_split("Noha   sdfsfsdfsdfha dfs sdfkjh qiuwguwgry", ' ');
-	
-	int i = 0;
-
-	while (s[i])
-		printf("[%s]\n", s[i++]);
 }

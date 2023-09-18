@@ -6,7 +6,7 @@
 /*   By: nelhassa <nelhassa@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 00:48:05 by nelhassa          #+#    #+#             */
-/*   Updated: 2023/09/16 00:48:06 by nelhassa         ###   ########.fr       */
+/*   Updated: 2023/09/18 22:53:38 by nelhassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	if (start >= ft_strlen(s))
+	if (start > (unsigned int)ft_strlen(s))
 		return (ft_strdup(""));
-	if (len >= ft_strlen(s))
-		len = ft_strlen(s);
+	if (len >= ft_strlen(s + start))
+		len = ft_strlen(s + start);
 	str = (char *)malloc(sizeof(*s) * (len + 1));
 	if (!str)
 		return (NULL);
-	str = ft_memcpy(str, s + start, len);
-	str[len] = 0;
+	ft_strlcpy(str, s + start, len + 1);
 	return (str);
 }
